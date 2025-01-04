@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Adjustment</title>
+    <link rel="stylesheet" href="static/style.css"> <!-- Link to the CSS file -->
+    <link rel="icon" href="static/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Sidebar -->
+    <div id="sidebar">
+        <div class="toggle-btn" onclick="toggleSidebar()">&#8594;</div>
+        <div id="sidebarContent">
+            <h3>Image Adjustment</h3>
+            <form>
+                <label for="image" class="upload-btn">Upload an Image</label>
+                <input type="file" id="image" accept="image/*" required>
+                <button type="button" id="reset" onclick="resetImage()">Reset</button>
+
+                <br><br>
+
+                <button type="button" id="toggleControls" onclick="toggleAdjustmentControls()">Toggle Adjustment Controls</button>
+
+                <div id="adjustmentControls">
+                    <label for="contrast">Contrast:</label>
+                    <input type="range" id="contrast" min="0.1" max="4.0" step="0.1" value="1.0" onchange="updateImage()">
+                    <span id="contrastValue">1.0</span>
+                    <br><br>
+
+                    <label for="brightness">Brightness:</label>
+                    <input type="range" id="brightness" min="-255" max="255" step="1" value="0" onchange="updateImage()">
+                    <span id="brightnessValue">0</span>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Main content -->
+    <h1>Image Adjustment</h1>
+    <br>
+    <img id="adjustedImage" alt="Adjusted Image" style="max-width: 100%; height: auto;">
+
+    <!-- Link to your JavaScript file -->
+    <script src="static/script.js"></script>
+    <script>
+        document.getElementById('image').addEventListener('change', updateImage);
+    </script>
+
+</body>
+</html>

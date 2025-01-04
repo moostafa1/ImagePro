@@ -1,0 +1,98 @@
+body {
+    background-color: lightgray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+form {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#adjustedImage {
+    max-width: 100%;
+    max-height: 80vh;
+    object-fit: contain;
+    border: 1px solid #ccc;
+    background-color: white;
+}
+
+#adjustmentControls {
+    display: none;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    display: none; /* Initially hidden */
+}
+
+/* Sidebar styles */
+#sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 60px;
+    background-color: darkgray;
+    overflow-x: hidden;
+    transition: all 0.3s;
+    padding-top: 10px;
+}
+
+#sidebar.expanded {
+    width: 250px;
+}
+
+#sidebar .toggle-btn {
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+    color: white;
+    transition: transform 0.3s;
+}
+
+#sidebar .toggle-btn.expanded {
+    transform: rotate(180deg);
+}
+
+#sidebar .toggle-btn:hover {
+    background-color: #444;
+}
+
+#sidebarContent {
+    padding-left: 10px;
+    display: none;
+    color: white;
+}
+
+#sidebar.expanded #sidebarContent {
+    display: block;
+}
+
+#sidebar.expanded #toggleControls {
+    display: inline-block; /* Show button only when expanded */
+}
+
+#image {
+    display: none;
+}
+.upload-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.upload-btn:hover {
+    background-color: #0056b3;
+}
