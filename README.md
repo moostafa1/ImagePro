@@ -8,9 +8,10 @@ ImagePro is a web-based image editing tool that allows users to upload images an
 - **Filters and Effects**: Apply popular image filters and effects, including:
   - Contrast adjustment
   - Brightness control
-  - Saturation and sharpness enhancements
-  - Grayscale and other visual styles
-- **Image Processing Techniques**: Apply computer vision techniques to edit images, such as edge detection, blurring, and more.
+  - Opacity control
+  - Blur image
+  - mirror the image horizontal or vertical
+- **Image Processing Techniques**: Apply computer vision techniques to edit images, flipping, blurring, and more.
 - **Download Edited Image**: After processing the image, users can download the edited version.
 
 ## Installation
