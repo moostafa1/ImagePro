@@ -26,6 +26,12 @@ form {
     margin-top: 20px;
 }
 
+#opacityBlurControls {
+    display: none;
+    margin-top: 20px;
+}
+
+
 button {
     padding: 10px 20px;
     font-size: 16px;
@@ -84,15 +90,60 @@ button {
 #image {
     display: none;
 }
+
 .upload-btn {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #007bff;
+    background-color: #0cbf7a72;
     color: white;
     text-align: center;
     border-radius: 5px;
     cursor: pointer;
 }
+
 .upload-btn:hover {
-    background-color: #0056b3;
+    background-color: #9db1c6;
+}
+
+/* Apply the .style-btn styles with higher specificity */
+.style-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #2bc6b1c3;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Hover effect for the button */
+.style-btn:hover {
+    background-color: #0b544af6;
+}
+
+/* Style for the mirror buttons container */
+#mirrorControls {
+    display: none; /* Initially hidden */
+    flex-direction: row; /* Align buttons horizontally */
+    gap: 10px; /* Add space between buttons */
+    justify-content: center; /* Center the buttons horizontally */
+    margin-top: 10px; /* Add some space above the buttons */
+}
+
+/* Style for the mirror buttons */
+.mirror-btn {
+    display: inline-block; /* Ensure buttons are shown */
+    padding: 10px 20px; /* Padding for better visibility */
+    background-color: #bfb71cc3; /* Yellow background */
+    color: white; /* Text color */
+    text-align: center;
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer on hover */
+    font-size: 14px; /* Font size */
+    margin: 0 10px; /* Add spacing between buttons */
+}
+
+.mirror-btn:hover {
+    background-color: #d9f40d; /* Darker yellow for hover effect */
 }

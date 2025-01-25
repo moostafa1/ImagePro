@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Mostafa Noaman">
     <title>Image Adjustment</title>
     <link rel="stylesheet" href="static/style.css"> <!-- Link to the CSS file -->
     <link rel="icon" href="static/favicon.ico" type="image/x-icon">
@@ -16,22 +17,39 @@
             <form>
                 <label for="image" class="upload-btn">Upload an Image</label>
                 <input type="file" id="image" accept="image/*" required>
-                <button type="button" id="reset" onclick="resetImage()">Reset</button>
-
                 <br><br>
-
-                <button type="button" id="toggleControls" onclick="toggleAdjustmentControls()">Toggle Adjustment Controls</button>
-
+                <button type="button" class="style-btn" id="toggleControls1" onclick="toggleAdjustmentControls()">Contrast & Brightness</button>
                 <div id="adjustmentControls">
                     <label for="contrast">Contrast:</label>
                     <input type="range" id="contrast" min="0.1" max="4.0" step="0.1" value="1.0" onchange="updateImage()">
                     <span id="contrastValue">1.0</span>
                     <br><br>
-
                     <label for="brightness">Brightness:</label>
                     <input type="range" id="brightness" min="-255" max="255" step="1" value="0" onchange="updateImage()">
                     <span id="brightnessValue">0</span>
                 </div>
+
+                <br>
+                <button type="button" class="style-btn" id="toggleControls2" onclick="opacityBlurAdjustmentControls()">Opacity & Blur</button>
+                <div id="opacityBlurControls" style="display: none;">
+                    <label for="opacity">Opacity:</label>
+                    <input type="range" id="opacity" min="0.0" max="1.0" step="0.1" value="1.0" onchange="updateImage()">
+                    <span id="opacityValue">1.0</span>
+                    <br><br>
+                    <label for="blur_ksize">Blurring:</label>
+                    <input type="range" id="blur_ksize" min="1" max="45" step="2" value="1" onchange="updateImage()">
+                    <span id="blur_ksizeValue">0</span>
+                </div>
+                <br>
+
+                <button type="button" class="style-btn" id="togglecontrols3" onclick="mirrorAdjustmentControls()">Mirror</button>
+                <div id="mirrorControls" style="display: none;">
+                    <button type="button" class="style-btn" id="horizontal">H</button>
+                    <button type="button" class="style-btn" id="vertical">V</button>
+                </div>
+
+                <br>
+                <button type="button" class="style-btn" id="toggleControls4" onclick="resetImage()">Reset Image</button>
             </form>
         </div>
     </div>
@@ -41,11 +59,12 @@
     <br>
     <img id="adjustedImage" alt="Adjusted Image" style="max-width: 100%; height: auto;">
 
+    <!-- Footer to display author name -->
+    <footer style="text-align: center; margin-top: 20px;">
+        <p>Created by <strong>Mostafa Noaman</strong></p>
+    </footer>
+
     <!-- Link to your JavaScript file -->
     <script src="static/script.js"></script>
-    <script>
-        document.getElementById('image').addEventListener('change', updateImage);
-    </script>
-
 </body>
 </html>
