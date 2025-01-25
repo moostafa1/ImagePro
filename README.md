@@ -26,4 +26,4 @@ Ensure you have the following installed on your system:
 
 1. Clone this repository to your local machine:
    ```bash
-   git clone https://github.com/your-username/ImagePro.git
+   git clone https://github.com/moostafa1/ImagePro
